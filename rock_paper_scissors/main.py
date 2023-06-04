@@ -14,7 +14,7 @@ class bcolors:
     UNDERLINE = '\033[4m'
 
 
-options = ["(Rock 🪨 )", "(Paper 🗞 )", "(Scissors ✀ )"]
+options = ["(Rock 🪨 )", "(Paper 🗞 )", "(Scissors ✂ )"]
 
 # print multiline instruction
 # performstring concatenation of string
@@ -50,8 +50,8 @@ def get_Choices(retries=4, reminder="Come on, just pick a valid option."):
         except ValueError as e:
             print(e)
             print(bcolors.YELLOW
-                  + "You should choose the integer value \
-                          of your chosen action."
+                  + "You should choose the integer value"
+                  + "of your chosen action."
                   + bcolors.END)
         # check if the input is in the options range
         else:
