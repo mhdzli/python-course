@@ -10,5 +10,5 @@ with open(txtfile, "w", encoding="utf-8", errors='ignore') as file:
 {unicodedata.name(chr(uc)).lower()}, \
 {unicodedata.category(chr(uc)).lower()}, {hex(uc)}\n"
         except ValueError:
-            line = f"{str(uc)}, {chr(uc)}, none, none, {hex(uc)}"
+            line = f"{str(uc)}, {chr(uc)}, none, none, {hex(uc)}\n"
         file.write(line)
