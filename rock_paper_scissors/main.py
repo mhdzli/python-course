@@ -105,7 +105,7 @@ You lose. 😞" + bcolors.END
 def ask_ok(prompt, retries=4, reminder='Please try again!'):
     while True:
         ok = input(bcolors.HEADER + prompt + bcolors.END)
-        if ok in ('y', 'ye', 'yes'):
+        if ok in ('y', 'ye', 'yes', ''):
             return True
         if ok in ('n', 'no', 'nop', 'nope'):
             return False
@@ -121,6 +121,6 @@ while True:
         resulte = check_winner(choices["user"], choices["computer"])
         print(resulte)
 
-    play_again = ask_ok("Play again? 🤔 (y/n): ", 2)
+    play_again = ask_ok("Play again? 🤔 (Y/n): ", 2)
     if not play_again:
         break
